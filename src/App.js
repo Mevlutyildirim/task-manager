@@ -6,7 +6,7 @@ import SignUpScreen from "./screens/signUpScreen";
 function Main() {
   return (
     <Switch>
-      <Route path="/signIn" component={SignUpScreen} />
+      <Route path="/signup" component={SignUpScreen} />
     </Switch>
   );
 }
