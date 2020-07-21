@@ -4,7 +4,7 @@ task-manager a project management app which you can efficiently track your proje
 
 ## Engineering Stack 
 
-the app has been constructed with following techs
+the app has been constructed with following techs.
 
 * react
 * styled-components
@@ -15,4 +15,5 @@ the app has been constructed with following techs
 * elasticSearch
 
 ## Licence 
-all rights has been reserved 
+all rights has been reserved by mevlüt yıldırım.
+This project licensed under MIT.
