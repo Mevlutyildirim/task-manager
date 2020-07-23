@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Navigation from "../components/navigation";
 import Input from "../components/input";
 import Button from "../components/button";
 
 function SignInScreen() {
   return (
     <React.Fragment>
-      <Navigation />
+
       <Card>
         <Input placeholder="tam isim" name="full-name" type="text" />
         <Button title="Sign In" />

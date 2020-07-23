@@ -1,13 +1,70 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import home from "../assets/icons/home.png";
+import bell from "../assets/icons/bell.png";
+import search from "../assets/icons/search.png";
 
-function Navigation(){
-
-  return(
-    <nav>
-      
-    </nav>
-  )
+function Icon(props) {
+  const { name } = props;
+  if (name === "home") {
+    return <HomeIcon></HomeIcon>;
+  }
+  if (name === "bell") {
+    return <BellIcon></BellIcon>;
+  }
+  if (name === "search") {
+    return <SearchIcon></SearchIcon>;
+  }
 }
 
+function Navigation() {
+  return (
+    <NavigationNav>
+      <Icon name="home"/>
+      <Icon name="bell"/>
+      <Icon name="search"/>
+      <Profile/>
+    </NavigationNav>
+  );
+}
+
+const NavigationNav = styled.nav`
+  border-top: 1px solid rgba(0,0,0,0.25);
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const Profile = styled.span`
+display: block;
+height: 30px;
+width: 30px;
+border-radius: 50%;
+background-color: #C4C4C4;
+`
+const BasicIcon = styled.span`
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const HomeIcon = styled(BasicIcon)`
+  background-image: url(${home});
+`;
+
+const BellIcon = styled(BasicIcon)`
+  background-image: url(${bell});
+`;
+
+const SearchIcon = styled(BasicIcon)`
+  background-image: url(${search});
+`;
 export default Navigation;
