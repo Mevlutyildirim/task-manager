@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 function HomeScreen(){
 
   return(
-    <div></div>
+  <div></div>
   )
 }
 
