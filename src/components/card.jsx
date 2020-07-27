@@ -17,6 +17,7 @@ function Card() {
 const Wrapper = styled.div`
  padding: 10px 30px;
 `;
+
 const Title = styled.h3`
 display: block;
 padding-left: 10px;
