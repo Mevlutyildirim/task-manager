@@ -4,7 +4,7 @@ import styled from "styled-components";
 function footer() {
   return (
     <FooterWrapper>
-      <span>product by mevlüt yıldırım</span>
+      <span>product by MEVLÜT YILDIRIM</span>
     </FooterWrapper>
   );
 }

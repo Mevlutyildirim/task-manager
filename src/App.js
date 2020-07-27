@@ -8,7 +8,7 @@ import Footer from './components/footer';
 const SignUpScreen = React.lazy(()=> import("./screens/signUpScreen"));
 const SignInScreen = React.lazy(()=> import("./screens/signInScreen"));
 const HomeScreen = React.lazy(()=> import("./screens/homeScreen"));
-
+const TaskScreen = React.lazy(()=> import("./screens/taskScreen"));
 
 function Main() {
   return (
@@ -17,6 +17,7 @@ function Main() {
       <Route path="/signup" component={SignUpScreen} />
       <Route path="/signin" component={SignInScreen} />
       <Route exact path="/" component={HomeScreen}/>
+      <Route path="/task" component={TaskScreen}/>
     </Switch>
     </Suspense>
   );
