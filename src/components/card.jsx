@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
+import {Link} from 'react-router-dom';
 function Card() {
   return (
     <Wrapper>
       <Title>Kişisel Panolar</Title>
       <Panos>
-        <Pano>
+        <Pano to="/task">
           <PanoCaption>Books</PanoCaption>
         </Pano>
       </Panos>
@@ -30,7 +30,7 @@ const Panos = styled.div`
 display: flex;
 padding: 0 10px;
 `;
-const Pano = styled.div`
+const Pano = styled(Link)`
   width: 165px;
   height: 100px;
   border-radius: 3px;

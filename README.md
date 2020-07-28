@@ -6,6 +6,7 @@ task-manager a project management app which you can efficiently track your proje
 
 the app has been constructed with following techs.
 
+* typeScript
 * react
 * styled-components
 * node.js
