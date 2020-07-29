@@ -38,6 +38,8 @@ const NavigationNav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1000;
+  background: #fff;
 `;
 
 const Profile = styled.span`

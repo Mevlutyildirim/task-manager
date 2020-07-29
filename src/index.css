@@ -10,7 +10,8 @@
 
  html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; 
+  height: 100%;/* 2 */
 }
 
 /* Sections
@@ -23,12 +24,16 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
 }
 
 /**
  * Render the `main` element consistently in IE.
  */
 
+ #root{
+   height: 100%;
+ }
 main {
   display: block;
 }

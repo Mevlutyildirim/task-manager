@@ -6,7 +6,7 @@ function Header() {
   return (
     <HeaderWrapper>
       <HeaderForm action="">
-        <Search type="search" required name="search" />
+        <Search type="search" required name="search" placeholder="search..." />
         <SearchBtn><SearchImg src={SearchIcon} alt=""/></SearchBtn>
       </HeaderForm>
     </HeaderWrapper>
@@ -18,7 +18,8 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 10px;
-  background: #f4f4f4;
+  background: #fff;
+  border-bottom: 1px solid #f4f4f4;
 `;
 
 const HeaderForm = styled.form`
@@ -26,6 +27,7 @@ const HeaderForm = styled.form`
   width: 100%;
   max-width: 30em;
   height: 40px;
+  border:none;
  
 `;
 const Search = styled.input`
@@ -35,7 +37,7 @@ const Search = styled.input`
   height: 30px;
   width: 100%;
   -webkit-appearance: none;
-  border: 1px solid darken(white, 30%);
+  border: 1px solid #f4f4f4;
 `;
 
 const SearchImg = styled.img`
@@ -49,6 +51,7 @@ width: 30px;
 height: 30px;
 border-radius: 0 6px 6px 0;
 display: flex;
+border:none;
 `
 
 export default Header;
