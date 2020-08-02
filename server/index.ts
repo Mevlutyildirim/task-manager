@@ -2,6 +2,7 @@ import express from 'express';
 import Cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import "reflect-metadata";
 
 dotenv.config();
 
