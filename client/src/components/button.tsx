@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Button({title}){
+type ButtonProps = {
+  title: string
+}
 
+const Button:React.FC<ButtonProps>= ({title}) =>{
   return(
     <PrimaryButton>
      {title}

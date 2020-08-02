@@ -3,13 +3,13 @@ import styled from "styled-components";
 import Input from "../components/input";
 import Button from "../components/button";
 
-function SignInScreen() {
+function SignUpScreen() {
   return (
     <React.Fragment>
-
+    
       <Card>
         <Input placeholder="tam isim" name="full-name" type="text" />
-        <Button title="Sign In" />
+        <Button title="Sign Up" />
       </Card>
     </React.Fragment>
   );
@@ -17,11 +17,11 @@ function SignInScreen() {
 
 const Card = styled.div`
   border: 1px solid #000;
-  maximum-width: 400px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export default SignInScreen;
+export default SignUpScreen;

@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Switch, Route} from "react-router-dom";
 import "./App.css";
-import Header from './components/header';
+import Header from "./components/header";
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 

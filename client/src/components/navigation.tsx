@@ -4,17 +4,20 @@ import home from "../assets/icons/home.png";
 import bell from "../assets/icons/bell.png";
 import search from "../assets/icons/search.png";
 
-function Icon(props) {
-  const { name } = props;
+type IconProps = {
+  name: "home" | "bell" | "search"
+}
+
+const Icon= ({name}) => {
+
   if (name === "home") {
     return <HomeIcon></HomeIcon>;
   }
   if (name === "bell") {
     return <BellIcon></BellIcon>;
   }
-  if (name === "search") {
-    return <SearchIcon></SearchIcon>;
-  }
+  
+  return <SearchIcon></SearchIcon>;
 }
 
 function Navigation() {
