@@ -10,6 +10,7 @@ class Task{
     ()=> List,
     list => list.id
   )
+  list: List
 }
 
 export default Task;

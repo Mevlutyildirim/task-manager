@@ -1,5 +1,4 @@
-import React, { Suspense } from "react";
-import { Switch, Route} from "react-router-dom";
+import React from "react";
 import "./App.css";
 import {Header, Navigation, Footer} from '../components/layout';
 import Routes from './Routes';
