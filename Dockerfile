@@ -1,7 +1,6 @@
 FROM node:alpine
 WORKDIR '/app'
-
-COPY package.json .
-RUN npm install 
-COPY . . 
-CMD ["npm", "start"]
+COPY client .
+RUN yarn install 
+COPY server .
+RUN yarn install

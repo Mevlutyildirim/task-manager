@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/Mevlutyildirim/task-manager.git",
   "author": "Mevlutyildirim <Mevlutyildirim@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start"
+  }
 }
