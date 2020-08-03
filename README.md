@@ -11,7 +11,7 @@ the app has been constructed with following techs.
 * styled-components
 * node.js
 * express
-* mysql (with sequelize orm)
+* mysql (with typeorm)
 * redis
 * elasticSearch
 
