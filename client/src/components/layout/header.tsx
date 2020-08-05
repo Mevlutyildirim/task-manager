@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SearchIcon from '../../assets/icons/search.png';
+import SearchIcon from 'assets/icons/search.png';
 
 function Header() {
   return (

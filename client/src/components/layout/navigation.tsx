@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import home from "../../assets/icons/home.png";
-import bell from "../../assets/icons/bell.png";
-import search from "../../assets/icons/search.png";
+import home from "assets/icons/home.png";
+import bell from "assets/icons/bell.png";
+import search from "assets/icons/search.png";
 
 type IconProps = {
   name: "home" | "bell" | "search"

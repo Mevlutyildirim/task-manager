@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import {SignUpScreen, SignInScreen, HomeScreen, TaskScreen} from '../screens';
+import {SignUpScreen, SignInScreen, HomeScreen, TaskScreen} from 'screens';
 
 const Routes = ()=>{
   return(

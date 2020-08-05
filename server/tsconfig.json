@@ -8,6 +8,10 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true,
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "baseUrl": "src",
+      "paths": {
+         "*": ["./*"]
+       },
    }
 }
