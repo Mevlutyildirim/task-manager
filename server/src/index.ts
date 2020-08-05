@@ -1,14 +1,14 @@
-import {createConnection} from "typeorm";
-import User from "./entity/User";
+import express from 'express';
+import Cors from 'cors';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+import "reflect-metadata";
 
-createConnection().then(async connection => {
+dotenv.config();
 
-    console.log("Inserting a new user into the database...");
-   
-    console.log("Loading users from the database...");
-    const users = await connection.manager.find(User);
-    console.log("Loaded users: ", users);
+const App = express();
 
-    console.log("Here you can setup and run express/koa/any other framework.");
-
-}).catch(error => console.log(error));
+App.use(Cors());
+App.use(morgan("dev"));
+App.use(express.json());
+App.listen(5000, ()=> console.log(`server is up and running ${process.env.NODE_ENV}`));

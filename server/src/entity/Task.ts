@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryColumn, OneToMany} from 'typeorm';
+import {Entity, Column, PrimaryColumn,  ManyToOne, CreateDateColumn} from 'typeorm';
 import {List} from '.'
 @Entity()
 class Task{
@@ -6,11 +6,18 @@ class Task{
   @PrimaryColumn()
   id:number;
 
-  @OneToMany(
+  @ManyToOne(
     ()=> List,
     list => list.id
   )
-  list: List
+  list: List;
+
+  @CreateDateColumn()
+  createdAt:Date;
+
+  @Column()
+  state:Boolean;
+
 }
 
 export default Task;

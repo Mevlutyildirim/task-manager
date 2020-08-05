@@ -6,6 +6,9 @@ class Team{
   @PrimaryColumn()
   id:number;
 
+  @Column()
+  name:string;
+
   @CreateDateColumn()
   createdAt: Date;
 }
