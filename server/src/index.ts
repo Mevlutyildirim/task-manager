@@ -2,10 +2,10 @@ import express from 'express';
 import Cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+dotenv.config();
 import "reflect-metadata";
 import {connectDatabase} from './database/createConnection';
 
-dotenv.config();
 
 
 const boostDatabase = async ():Promise<void>=>{
