@@ -18,6 +18,9 @@ class Task{
   @Column()
   state:Boolean;
 
+  @Column()
+  order:number;
+
 }
 
 export default Task;
