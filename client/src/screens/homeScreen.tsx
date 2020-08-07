@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from 'shared/components/card';
+import Team from 'shared/components/team';
 
 function HomeScreen(){
 
   return(
-  <Card/>
+  <Team/>
   )
 }
 
