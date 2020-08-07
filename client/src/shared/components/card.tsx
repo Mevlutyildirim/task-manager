@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
-function Card() {
+function Card(props) {
   return (
-    <Pano to="/task">
+    <Pano to="/task" {...props}>
       <Caption>Books</Caption>
     </Pano>
   );
@@ -22,16 +22,19 @@ const SharedStyles = css`
   height: 100px;
   border-radius: 3px;
   margin-right: 10px;
-  background: #0866a2;
   display: flex;
 `;
 
+
 const Pano = styled(Link)`
   ${SharedStyles}
+  background: ${(props:{background:string}) => props.background}
 `;
 
 const PanoButton = styled.div`
   ${SharedStyles}
+  background: #b4b4b4;
+  font-size: 20px;
 `;
 const Caption = styled.span`
   display: block;

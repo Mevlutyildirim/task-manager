@@ -1,5 +1,5 @@
 import React from 'react';
-import Team from 'shared/components/team';
+import {Team} from 'shared/components/team';
 
 function HomeScreen(){
 

@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Card , {AddCard} from 'shared/components/card';
 
-export default function Team(){
+export const Team:React.FC = () =>{
 
   return(
     <Container>
       <Title>Kişisel Panolar</Title>
       <Panos>
-        <Card/>
+        <Card background="red"/>
         <AddCard/>
       </Panos>
     </Container>
