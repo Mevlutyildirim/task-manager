@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "components/input";
-import Button from "components/button";
+import Input from "shared/components/input";
+import Button from "shared/components/button";
 
 function SignUpScreen() {
   return (

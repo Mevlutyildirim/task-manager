@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Task from "components/task";
-import Button from "components/button";
-import SideBar from "components/sideBar";
+import Task from "shared/components/task";
+import Button from "shared/components/button";
+import SideBar from "shared/components/sideBar";
 
 function TaskScreen() {
   return (
