@@ -7,7 +7,7 @@ import * as Sign from "screens/sign.style";
 const { Main, Card } = Sign;
 function SignUpScreen() {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = (data:SignUpFormProps) => {
     console.log(data);
   };
   return (

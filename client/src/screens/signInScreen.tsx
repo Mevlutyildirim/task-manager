@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {Input, SignTitle} from "shared/components";
 import Button from "shared/components/button";
 import { useForm } from "react-hook-form";

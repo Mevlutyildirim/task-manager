@@ -28,7 +28,7 @@ const SharedStyles = css`
 
 const Pano = styled(Link)`
   ${SharedStyles}
-  background: ${(props:{background:string}) => props.background}
+  background: ${(props:{background:string}) => props.background};
 `;
 
 const PanoButton = styled.div`
