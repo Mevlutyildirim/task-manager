@@ -11,3 +11,35 @@ const defaults = {
   })
 };
 
+
+class ajax{
+  
+  static response(method, param){
+    const call = async ()=>{
+      try{
+        return {status, data} = await axios[method](...param)
+
+      }catch(err){
+        console.log(err);
+      }
+    }
+    return call();
+  }
+  static get(url){
+    return ajax.response("get", [url])
+  }
+
+  static post(url, body){
+    return ajax.response("post", [url, body])
+  }
+
+  static put(url, body){
+    return ajax.response("put", [url, body])
+  }
+
+  static delete(url){
+   return ajax.response("delete", [url])
+  }
+}
+
+export default ajax;
