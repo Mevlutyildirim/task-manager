@@ -16,6 +16,7 @@ background: #FFFFFF;
 border: 1px solid #DBDBDB;
 box-sizing: border-box;
 border-radius: 6px;
+padding-left:10px;
 `;
 
 export default Input;
