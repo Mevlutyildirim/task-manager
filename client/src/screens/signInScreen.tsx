@@ -2,26 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import Input from "shared/components/input";
 import Button from "shared/components/button";
+import { useForm } from "react-hook-form";
+import {Card} from 'screens/sign.style';
 
 function SignInScreen() {
+  const { register, handleSubmit, errors } = useForm();
+  const onSumbit = (data) => {
+    console.log(data);
+  };
   return (
-    <React.Fragment>
-
-      <Card>
-        <Input placeholder="tam isim" name="full-name" type="text" />
-        <Button title="Sign In" />
-      </Card>
-    </React.Fragment>
+    <Card onSubmit={handleSubmit(onSumbit)}>
+      <Input
+        placeholder="e-mail"
+        name="e-mail"
+        type="e-mail"
+        ref={register({ required: true })}
+      />
+      <Input
+        placeholder="password"
+        name="password"
+        type="password"
+        ref={register({ required: true })}
+      />
+      <Button title="Sign In" />
+    </Card>
   );
 }
-
-const Card = styled.div`
-  border: 1px solid #000;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 
 export default SignInScreen;

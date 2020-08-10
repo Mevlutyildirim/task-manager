@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Input({placeholder, name, type}){
+function Input(props){
 
   return(
-    <FormInput placeholder= {placeholder} name={name} type={type}/>
+    <FormInput {...props}/>
   )
 }
 

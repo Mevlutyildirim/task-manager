@@ -8,7 +8,8 @@ export const authenticate = () => {
   useEffect(() => {
     const getToken = async () => {
       try {
-        const { token } = await ajax();
+        const {data} = await ajax.get('auth');
+        const token = data.token;
         set("auth", token);
         history.push("/");
       } catch (err) {

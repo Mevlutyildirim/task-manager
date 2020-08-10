@@ -4,10 +4,18 @@ export default createGlobalStyle`
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    height:100%;
   }
   body {
     margin: 0;
+    height:100%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  #root{
+    height:100%;
+    display:grid;
+    grid-template-rows: 50px auto  50px;
+    overflow: auto;
   }
   main {
     display: block;

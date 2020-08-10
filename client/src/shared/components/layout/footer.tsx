@@ -14,7 +14,7 @@ const FooterWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 export default footer;
