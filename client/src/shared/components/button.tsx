@@ -30,7 +30,7 @@ border-radius: 6px;
 
 const PrimaryButtonStyle = styled.button`
 ${ButtonBase}
-background: #3E95EF;
+background: ${props => props.theme.colors.primary};
 border: 1px solid #DBDBDB;
 color: #fff;
 width: 324px;
