@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Task from "shared/components/task";
-import Button from "shared/components/button";
+import * as Button from "shared/components/button";
 import SideBar from "shared/components/sideBar";
+
+const {PrimaryButton} = Button;
 
 function TaskScreen() {
   return (
     <List>
       <Tasks>
         <Task />
-        <Button title="Liste Ekle" />
+        <PrimaryButton title="Liste Ekle" />
       </Tasks>
       <SideBar />
     </List>

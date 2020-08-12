@@ -1,28 +1,46 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type ButtonProps = {
   title: string
 }
 
-const Button:React.FC<ButtonProps>= ({title}) =>{
+const PrimaryButton:React.FC<ButtonProps>= ({title}) =>{
   return(
-    <PrimaryButton>
+    <PrimaryButtonStyle>
      {title}
-    </PrimaryButton>
+    </PrimaryButtonStyle>
   )
 }
 
-const PrimaryButton = styled.button`
-width: 324px;
+const SecondaryButton:React.FC<ButtonProps> = ({title}) => {
+  return(
+    <SecondaryButtonStyle>
+      {title}
+    </SecondaryButtonStyle>
+  )
+}
+
+const ButtonBase = css`
 height: 40px;
 margin: 10px;
-background: #3E95EF;
-border: 1px solid #DBDBDB;
 box-sizing: border-box;
 border-radius: 6px;
-color: #fff;
 `;
 
+const PrimaryButtonStyle = styled.button`
+${ButtonBase}
+background: #3E95EF;
+border: 1px solid #DBDBDB;
+color: #fff;
+width: 324px;
+`;
 
-export default Button;
+const SecondaryButtonStyle = styled.button`
+${ButtonBase}
+background: #fff;
+border: 1px solid #3E95EF;
+padding: 0 20px;
+`;
+
+export {PrimaryButton, SecondaryButton};

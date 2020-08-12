@@ -1,10 +1,11 @@
 import React from "react";
 import Input from "shared/components/input";
-import Button from "shared/components/button";
+import * as Button from "shared/components/button";
 import { useForm } from "react-hook-form";
 import * as Sign from "screens/sign.style";
 
 const { Main, Card } = Sign;
+const {PrimaryButton} = Button;
 function SignUpScreen() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data:SignUpFormProps) => {
@@ -37,7 +38,7 @@ function SignUpScreen() {
           type="password"
           ref={register({ required: true })}
         />
-        <Button title="Sign Up" />
+        <PrimaryButton title="Sign Up" />
       </Card>
     </Main>
   );

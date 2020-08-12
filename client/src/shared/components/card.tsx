@@ -12,7 +12,7 @@ function Card(props) {
 export function AddCard() {
   return (
     <PanoButton>
-      <Button>+</Button>
+      <Button>Create a Project</Button>
     </PanoButton>
   );
 }
@@ -34,7 +34,7 @@ const Pano = styled(Link)`
 const PanoButton = styled.div`
   ${SharedStyles}
   background: #b4b4b4;
-  font-size: 20px;
+  font-size: 15px;
 `;
 const Caption = styled.span`
   display: block;

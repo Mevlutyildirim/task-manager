@@ -17,6 +17,10 @@ export const Team:React.FC = () =>{
 
 const Container = styled.div`
  padding: 10px 30px;
+ max-width: 820px;
+ min-width: 300px;
+ margin: 20px 40px;
+
 `;
 
 const Title = styled.h3`

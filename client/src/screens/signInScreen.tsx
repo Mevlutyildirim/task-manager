@@ -1,9 +1,10 @@
 import React from "react";
 import {Input, SignTitle} from "shared/components";
-import Button from "shared/components/button";
+import * as Button from "shared/components/button";
 import { useForm } from "react-hook-form";
 import {Main, Card} from 'screens/sign.style';
 
+const {PrimaryButton} = Button;
 function SignInScreen() {
   const { register, handleSubmit, errors } = useForm();
   const onSumbit = (data:SignInFormProps) => {
@@ -25,7 +26,7 @@ function SignInScreen() {
         type="password"
         ref={register({ required: true })}
       />
-      <Button title="Sign In" />
+      <PrimaryButton title="Sign In" />
     </Card>
     </Main>
   );
