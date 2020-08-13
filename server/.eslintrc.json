@@ -1,6 +1,6 @@
 {
     "env": {
-        "browser": true,
+        "node": true,
         "es2020": true
     },
     "extends": [
@@ -20,3 +20,4 @@
         "quotes": ["error", "double"]
     }
 }
+
