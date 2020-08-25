@@ -1,5 +1,5 @@
 import React from "react";
-import {Input, SignTitle} from "shared/components";
+import {FormInput, SignTitle} from "shared/components";
 import * as Button from "shared/components/button";
 import { useForm } from "react-hook-form";
 import {Main, Card} from 'screens/sign.style';
@@ -14,13 +14,13 @@ function SignInScreen() {
     <Main>
     <Card onSubmit={handleSubmit(onSumbit)}>
       <SignTitle title="login"/>
-      <Input
+      <FormInput
         placeholder="e-mail"
         name="e-mail"
         type="e-mail"
         ref={register({ required: true })}
       />
-      <Input
+      <FormInput
         placeholder="password"
         name="password"
         type="password"

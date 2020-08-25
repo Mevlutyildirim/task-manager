@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Input(props){
-
-  return(
-    <FormInput {...props}/>
-  )
-}
-
 const FormInput = styled.input`
 width: 324px;
 height: 40px;
@@ -19,4 +12,4 @@ border-radius: 6px;
 padding-left:10px;
 `;
 
-export default Input;
+export default FormInput;

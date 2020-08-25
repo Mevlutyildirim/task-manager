@@ -1,5 +1,6 @@
 
-export {default as Input} from 'shared/components/input';
+export *  from 'shared/components/errors';
+export {default as FormInput} from 'shared/components/input';
 export {default as SignTitle} from 'shared/components/title';
 export {default as Card} from 'shared/components/card';
 export {Team} from 'shared/components/team';
