@@ -1,10 +1,11 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
+
 function Card(props) {
   return (
-    <Pano to="/task" {...props}>
-      <Caption>Books</Caption>
+    <Pano to="/task" background={props.background} >
+      <Caption>{props.name}</Caption>
     </Pano>
   );
 }
