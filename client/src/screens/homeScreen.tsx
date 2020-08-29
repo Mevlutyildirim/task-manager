@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Team } from "shared/components/team";
+import { Team, EmptyHome } from "shared/components";
 import * as Button from "shared/components/button";
 const { SecondaryButton } = Button;
 
@@ -10,15 +10,15 @@ interface teamProps {
 }
 
 function HomeScreen() {
-  const teams: Array<teamProps> = [
-    { id: 1, name: "takim 1" },
-    { id: 2, name: "takim 2" },
+  const teams: Array<teamProps|null > = [
+
   ];
   return (
     <Home>
       <Menu>
         <SecondaryButton title="Add Team" />
       </Menu>
+      {teams.length == 0 && <EmptyHome/>}
       {teams.map((team, idx) => (
         <Team
           id={team.id}
