@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Task from "shared/components/task";
 import * as Button from "shared/components/button";
 import SideBar from "shared/components/sideBar";
+import {TaskBar} from 'shared/components/layout';
 
 const { PrimaryButton } = Button;
 
@@ -17,6 +18,8 @@ function TaskScreen() {
   ];
 
   return (
+    <>
+    <TaskBar/>
     <List>
       <Tasks>
         {datas.map((taskItem, idx) => (
@@ -26,6 +29,7 @@ function TaskScreen() {
       </Tasks>
       <SideBar />
     </List>
+    </>
   );
 }
 

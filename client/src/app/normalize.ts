@@ -13,8 +13,6 @@ html {
   }
   #root{
     height:100%;
-    display:grid;
-    grid-template-rows: 50px auto  50px;
     overflow: auto;
   }
   main {

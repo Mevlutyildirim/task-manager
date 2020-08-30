@@ -8,8 +8,8 @@ const Task: React.FC<TaskProps> = ({id, title, items }) => {
         <Title>{title}</Title>
       </TitleContainer>
       <CardBody>
-        {items.map((val, idx) => (
-          <Item>{val.title}</Item>
+        {items.map((item, idx) => (
+          <Item>{item.title}</Item>
         ))}
       </CardBody>
       <AddCard>Kart Ekle</AddCard>
@@ -56,7 +56,7 @@ const Item = styled.div`
   margin-bottom:10px;
   display:flex;
   align-items: center;
-  padding-left: 5px;
+  padding: 5px;
   font-size:14px;
   color: ${props => props.theme.colors.text.primary}
 `;
