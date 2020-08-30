@@ -50,9 +50,15 @@ const CardBody = styled.div`
 `;
 
 const Item = styled.div`
-  min-height: 35px;
+  min-height: 20px;
   background: #fff;
   border-radius: 3px;
+  margin-bottom:10px;
+  display:flex;
+  align-items: center;
+  padding-left: 5px;
+  font-size:14px;
+  color: ${props => props.theme.colors.text.primary}
 `;
 
 const AddCard = styled.button`

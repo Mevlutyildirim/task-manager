@@ -9,7 +9,7 @@ const MyTheme:Theme = {
     warning: 'rgb(255, 159, 67)',
     danger: 'rgb(234, 84, 85)',
     text: {
-      primary: '#000',
+      primary: '#172b4d',
       secondary: '#000'
     },
     bg: {
