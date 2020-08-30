@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-function Task() {
+const Task: React.FC<TaskProps> = ({id, title, items }) => {
   return (
     <List>
       <TitleContainer>
-        <Title>Test</Title>
+        <Title>{title}</Title>
       </TitleContainer>
       <CardBody>
-        <Item></Item>
+        {items.map((val, idx) => (
+          <Item>{val.title}</Item>
+        ))}
       </CardBody>
       <AddCard>Kart Ekle</AddCard>
     </List>
   );
-}
+};
 
 const List = styled.div`
   width: 270px;
@@ -41,17 +43,16 @@ const Title = styled.span`
 `;
 
 const CardBody = styled.div`
-
-display: flex;
-flex-direction: column;
-padding: 10px;
-align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: stretch;
 `;
 
 const Item = styled.div`
- min-height: 35px;
- background: #fff;
- border-radius: 3px;
+  min-height: 35px;
+  background: #fff;
+  border-radius: 3px;
 `;
 
 const AddCard = styled.button`

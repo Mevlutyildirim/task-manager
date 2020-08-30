@@ -10,15 +10,16 @@ interface teamProps {
 }
 
 function HomeScreen() {
-  const teams: Array<teamProps|null > = [
-
+  const teams: Array<teamProps | null> = [
+    { id: 1, name: "takim 1" },
+    { id: 2, name: "takim 2" },
   ];
   return (
     <Home>
       <Menu>
         <SecondaryButton title="Add Team" />
       </Menu>
-      {teams.length == 0 && <EmptyHome/>}
+      {teams.length == 0 && <EmptyHome />}
       {teams.map((team, idx) => (
         <Team
           id={team.id}
