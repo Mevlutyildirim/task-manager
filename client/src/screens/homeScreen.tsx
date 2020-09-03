@@ -2,13 +2,37 @@ import React from "react";
 import styled from "styled-components";
 import { Team, EmptyHome } from "shared/components";
 import * as Button from "shared/components/button";
+import { useForm } from 'react-hook-form';
+import {FormInput, InputError} from 'shared/components';
 const { SecondaryButton } = Button;
-
 interface teamProps {
   id: number;
   name: string;
 }
 
+interface CreateTeamFormProps {
+  createTeam: (onCreateTeam:string) => void;
+}
+
+ const CreateTeamForm:React.FC<CreateTeamFormProps> = ({createTeam}) =>{
+
+  const {register, handleSubmit, errors} = useForm();
+
+  const onSumbitForm = (data) =>{
+   console.log(data);
+  }
+
+  return (
+    <form onSubmit={handleSubmit(onSumbitForm)}>
+     <FormInput
+     id="teamName"
+     name="teamName"
+     ref= {register() }/>
+     {errors.teamName && <InputError>{errors.teamName.message}</InputError>}
+    </form>
+  )
+
+ }
 function HomeScreen() {
   const teams: Array<teamProps | null> = [
     { id: 1, name: "takim 1" },

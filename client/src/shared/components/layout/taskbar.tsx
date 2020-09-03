@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const TaskBar: React.FC = () => {
@@ -19,7 +19,7 @@ const TaskBarStyle = styled.div`
   padding-left: 20px;
 `;
 
-const TaskBarLinkStyle = styled(Link)`
+const TaskBarLinkStyle = styled(NavLink)`
 margin: 0 10px;
 line-height: 2;
 font-size: 18px;
