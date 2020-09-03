@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import { Team, EmptyHome } from "shared/components";
+import { Team, EmptyHome, Modal } from "shared/components";
 import * as Button from "shared/components/button";
 import { useForm } from 'react-hook-form';
 import {FormInput, InputError} from 'shared/components';
@@ -11,11 +11,9 @@ interface teamProps {
   name: string;
 }
 
-interface CreateTeamFormProps {
-  createTeam: (onCreateTeam:string) => void;
-}
 
- const CreateTeamForm:React.FC<CreateTeamFormProps> = ({createTeam}) =>{
+
+ const CreateTeamForm:React.FC = () =>{
 
   const {register, handleSubmit, errors} = useForm();
 
@@ -38,6 +36,7 @@ interface CreateTeamFormProps {
 function HomeScreen() {
 
    useDocument("Home")
+   const [isOpen, setOpen] = useState(false);
 
   const teams: Array<teamProps | null> = [
     { id: 1, name: "takim 1" },
@@ -46,8 +45,11 @@ function HomeScreen() {
   return (
     <Home>
       <Menu>
-        <SecondaryButton title="Add Team" />
+        <SecondaryButton title="Add Team"  render={()=>{
+          setOpen(true);
+        }}/>
       </Menu>
+      {isOpen && <Modal width="700" renderContent={()=> {return <CreateTeamForm/>}} />}
       {teams.length == 0 && <EmptyHome />}
       {teams.map((team, idx) => (
         <Team

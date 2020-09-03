@@ -2,13 +2,13 @@ import React from "react";
 import * as Button from "shared/components/button";
 import { useForm } from "react-hook-form";
 import * as Sign from "screens/sign.style";
-import  {FormInput,InputError} from 'shared/components';
+import { FormInput, InputError } from "shared/components";
 
 const { Main, Card } = Sign;
-const {PrimaryButton} = Button;
+const { PrimaryButton } = Button;
 function SignUpScreen() {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data:SignUpFormProps) => {
+  const onSubmit = (data: SignUpFormProps) => {
     console.log(data);
   };
   return (
@@ -35,7 +35,7 @@ function SignUpScreen() {
           name="email"
           id="email"
           type="e-mail"
-          ref={register({ required: "e-mail is required"})}
+          ref={register({ required: "e-mail is required" })}
         />
         {errors.email && <InputError>{errors.email.message}</InputError>}
         <FormInput

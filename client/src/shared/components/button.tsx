@@ -2,7 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 type ButtonProps = {
-  title: string
+  title: string;
+  render?: any;
 }
 
 const PrimaryButton:React.FC<ButtonProps>= ({title}) =>{
@@ -13,9 +14,9 @@ const PrimaryButton:React.FC<ButtonProps>= ({title}) =>{
   )
 }
 
-const SecondaryButton:React.FC<ButtonProps> = ({title}) => {
+const SecondaryButton:React.FC<ButtonProps> = ({title, render}) => {
   return(
-    <SecondaryButtonStyle>
+    <SecondaryButtonStyle onClick={render}>
       {title}
     </SecondaryButtonStyle>
   )
