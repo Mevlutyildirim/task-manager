@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import { Team, EmptyHome, Modal } from "shared/components";
+import { Team, EmptyHome, Modal, SignTitle } from "shared/components";
 import * as Button from "shared/components/button";
 import { useForm } from 'react-hook-form';
 import {FormInput, InputError} from 'shared/components';
@@ -22,17 +22,25 @@ interface teamProps {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSumbitForm)}>
+    <FormStyled onSubmit={handleSubmit(onSumbitForm)}>
+     <SignTitle title="Create a Team"/>
      <FormInput
      id="teamName"
      name="teamName"
      ref= {register() }/>
      {errors.teamName && <InputError>{errors.teamName.message}</InputError>}
      <PrimaryButton title="submit"/>
-    </form>
+    </FormStyled>
   )
 
  }
+
+ const FormStyled = styled.form`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ `
 function HomeScreen() {
 
    useDocument("Home")
@@ -49,7 +57,7 @@ function HomeScreen() {
           setOpen(true);
         }}/>
       </Menu>
-      {isOpen && <Modal width="700" renderContent={()=> {return <CreateTeamForm/>}} />}
+      {isOpen && <Modal width={400} renderContent={()=> {return <CreateTeamForm/>}} />}
       {teams.length == 0 && <EmptyHome />}
       {teams.map((team, idx) => (
         <Team

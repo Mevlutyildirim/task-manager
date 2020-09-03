@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import Card, { AddCard } from "shared/components/card";
+import {Modal} from 'shared/components';
 
 interface Project {
   id: number;
@@ -14,6 +15,8 @@ interface TeamProps {
 }
 
 export const Team: React.FC<TeamProps> = ({ projects, name, id }) => {
+  const [isNew, makeNew] = useState(false);
+
   return (
     <Container>
       <Title>{name}</Title>

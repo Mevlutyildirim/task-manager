@@ -24,10 +24,12 @@ const Overlay = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.3);
   display:flex;
   align-items:center;
   justify-content:center;
+  top: 0;
+  left:0;
 `;
 
 const ModalStyle = styled.div<{width:number}>`
