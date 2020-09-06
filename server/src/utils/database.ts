@@ -1,6 +1,10 @@
 import { Project, Task, List, Member, Team, User } from "entity";
 
-export const Find = async (Entity, id ) => {
+
+ type EntityType = typeof Project | typeof Task | typeof List | typeof Member | typeof Team | typeof User;
+ type EntityInstances = Project | Task | List | Member | Team | User;
+
+export const Find = async <T extends EntityType>(Entity:T, id:number ) => {
   const instance = await Entity.findOne(id);
 
   if (!instance) {
@@ -9,11 +13,11 @@ export const Find = async (Entity, id ) => {
   return instance;
 };
 
-export const Save = async (instance) => {
+export const Save = async <T extends EntityInstances>(instance:T):Promise<T> => {
   return instance.save();
 };
 
-export const Update = async (instance, id, input) => {
+export const Update = async <T extends EntityInstances>(instance:T, id:number, input):Promise<T> => {
   const Entity = Find(instance, id);
 
   Object.assign(Entity, input);
@@ -21,7 +25,7 @@ export const Update = async (instance, id, input) => {
   return Save(Entity);
 };
 
-export const Delete = async (Entity, id) => {
+export const Delete = async <T extends EntityType>(Entity:T, id:number) => {
 
   const instance = Find(Entity, id);
   await instance.remove();
