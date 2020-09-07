@@ -4,7 +4,7 @@ import  { AsyncError } from 'errors';
 
 
 export const getProject = AsyncError(async (req,res)=>{
-  const project = await Database.Find(Project, req.body.id)
+  const project = await Database.Find(Project, Number(req.params.id))
   res.status(200).send({project});
 })
 
