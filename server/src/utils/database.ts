@@ -17,7 +17,7 @@ export const Save = async <T extends EntityInstances>(instance:T):Promise<T> => 
   return instance.save();
 };
 
-export const Update = async <T extends EntityInstances>(instance:T, id:number, input):Promise<T> => {
+export const Update = async <T extends EntityType>(instance:T, id:number, input):Promise<T> => {
   const Entity = Find(instance, id);
 
   Object.assign(Entity, input);
